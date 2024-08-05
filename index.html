@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="resume.css" />
+  <title>AMAR SAROHA | Responsive Portfolio</title>
+  <style>
+    .resume-container {
+      display: none;
+    }
+    .contact-form {
+      display: none;
+      max-width: 500px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      padding: 10px 20px;
+      border: none;
+      background: #3498db;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="#">AMAR SAROHA</a></div>
+      <label for="check" class="checkbox">
+        <i class="ri-menu-line"></i>
+      </label>
+      <input type="checkbox" name="check" id="check" />
+      <ul>
+        <li><a href="https://www.instagram.com/amar.saroha_?igsh=NXQ5NXlwNmhucDJk">About</a></li>
+        <li><a href="#" id="resumeLink">Resume</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  <section class="section">
+    <div class="section__container">
+      <div class="content">
+        <p class="subtitle">HELLO</p>
+        <h1 class="title">
+          I'm <span>Amar Saroha<br />a</span> Web Developer
+        </h1>
+        <p class="description">
+          Welcome to my web developer portfolio! I'm Amar, a skilled and
+          creative web developer with a passion for creating beautiful,
+          responsive, and user-friendly websites.
+        </p>
+        <div class="action__btns">
+          <button class="hire__me" id="hireMeButton">Hire Me</button>
+          <button class="portfolio">Portfolio</button>
+        </div>
+      </div>
+      <div class="image">
+        <img src="portfoliopic.jpg" alt="Profile" />
+      </div>
+    </div>
+  </section>
+
+  <div id="resume" class="resume-container">
+    <div class="container">
+      <header>
+        <h1>Amar Saroha</h1>
+        <p>Web Developer | amarsaroha2022@vitbhopal.ac.in | 7900699367 |</p>
+      </header>
+      <section class="strengths">
+        <h2>Strengths</h2>
+        <ul>
+          <li>Spontaneous Thinking</li>
+          <li>Problem Solving</li>
+          <li>Reasoning Skills</li>
+          <li>Communication Skills</li>
+          <li>Leadership Skills</li>
+        </ul>
+      </section>
+      <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+          <li>Proficient in Java</li>
+          <li>Good at Web Development</li>
+          <li>Good in C</li>
+          <li>Management Skills</li>
+        </ul>
+      </section>
+      <section class="experience">
+        <h2>Experience</h2>
+        <ul>
+          <li>Event Manager for College Fest</li>
+          <li>IOT Based Project Lead</li>
+          <li>Disciplinary Team Head for Events and Fest</li>
+          <li>Core Member of OWASP Club</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+
+  <div id="contactForm" class="contact-form">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Your Phone Number" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('resumeLink').addEventListener('click', function(event) {
+      event.preventDefault();
+      const resumeSection = document.getElementById('resume');
+      if (resumeSection.style.display === 'none' || resumeSection.style.display === '') {
+        resumeSection.style.display = 'block';
+      } else {
+        resumeSection.style.display = 'none';
+      }
+    });
+
+    document.getElementById('hireMeButton').addEventListener('click', function() {
+      const contactForm = document.getElementById('contactForm');
+      if (contactForm.style.display === 'none' || contactForm.style.display === '') {
+        contactForm.style.display = 'block';
+      } else {
+        contactForm.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
